@@ -23,10 +23,8 @@ namespace Command.Commands
             }
         }
         private bool RegistryEmpty() => commandRegistry.Count == 0;
-        private bool CommandBelongsToActivePlayer()
-        {
+        private bool CommandBelongsToActivePlayer() =>
             (commandRegistry.Peek() as UnitCommand).commandData.ActorPlayerID == GameService.Instance.PlayerService.ActivePlayerID;
-        }
     }
 
 }
