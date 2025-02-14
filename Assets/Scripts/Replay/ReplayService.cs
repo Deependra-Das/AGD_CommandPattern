@@ -17,7 +17,7 @@ namespace Command.Replay
 
         public void SetCommandStack(Stack<ICommand> commandsToSet) => replayCommandStack = new Stack<ICommand>(commandsToSet);
 
-        public void ExecuteNext()
+        public IEnumerator ExecuteNext()
         {
             yield return new WaitForSeconds(1);
 
