@@ -31,8 +31,8 @@ namespace Command.Commands
                 if(previousHealth < targetUnit.CurrentHealth)
                 {
                     targetUnit.TakeDamage(actorUnit.CurrentPower);
-                    actorUnit.Owner.ResetCurrentActiveUnit();
-                }             
+                }
+                actorUnit.Owner.ResetCurrentActiveUnit();
             }
         }
     }
